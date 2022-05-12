@@ -1,5 +1,8 @@
-FROM jupyter/scipy-notebook
+FROM icr.io/ibmz/jupyter-notebook:6.4.5
+#jupyter/scipy-notebook
 #icr.io/ibmz/jupyter-notebook:6.4.5
+RUN whoami;pwd 
+USER root
 RUN mkdir my-model
 ENV MODEL_DIR=/home/jovyan/my-model
 ENV MODEL_FILE=svc_model.model
